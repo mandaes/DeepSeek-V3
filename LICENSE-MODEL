@@ -26,7 +26,7 @@ NOW THEREFORE, You and DeepSeek agree as follows:
 "Derivatives of the Model" means all modifications to the Model, works based on the Model, or any other model which is created or initialized by transfer of patterns of the weights, parameters, activations or output of the Model, to the other model, in order to cause the other model to perform similarly to the Model, including - but not limited to - distillation methods entailing the use of intermediate data representations or methods based on the generation of synthetic 
 
 ---
-# Personal fork note (added for my own reference):
-# Forked from deepseek-ai/DeepSeek-V3 for personal study and experimentation.
-# This license file is unmodified from the upstream source except for this note.
-# Do not use this fork for any commercial or production purposes.
+# Personal Note (fork)
+# Forked for personal study and experimentation.
+# No redistribution intended. All original license terms above remain in full effect.
+# See the upstream repo at https://github.com/deepseek-ai/DeepSeek-V3 for the authoritative copy.
