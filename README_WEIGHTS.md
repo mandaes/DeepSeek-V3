@@ -80,4 +80,4 @@ The FP8 weight file introduces a `quantization_config` field to describe the qua
 - **Activation Quantization Scheme**:
   - Utilizes dynamic activation quantization
 
-> **Personal note**: When loading the FP8 weights on consumer hardware (e.g., a single A100 80GB), I found it necessary to set `max_memory` carefully in `from_pretrained` to avoid OOM during weight loading. The MTP module weights are small enough that they can typically stay on GPU even in constrained setups.
+> **Personal note**: When loading on a single A100 80GB, I found it necessary to use `device_map="auto"` with at least 2 GPUs for the full FP8 weights. The BF16 version requires significantly more VRAM — FP8 is the practical option for most local setups.
