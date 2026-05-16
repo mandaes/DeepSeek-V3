@@ -80,4 +80,7 @@ The FP8 weight file introduces a `quantization_config` field to describe the qua
 - **Activation Quantization Scheme**:
   - Utilizes dynamic activation quantization
 
-> **Personal note**: When loading on a single A100 80GB, I found it necessary to use `device_map="auto"` with at least 2 GPUs for the full FP8 weights. The BF16 version requires significantly more VRAM — FP8 is the practical option for most local setups.
+> **Personal note**: When loading the FP8 weights on a consumer GPU (e.g. RTX 3090/4090), be aware that
+> `torch.float8_e4m3fn` requires PyTorch >= 2.1. If you hit a dtype error, upgrading torch is usually
+> the fix. BF16 fallback can be forced by removing `quantization_config` from `config.json` before
+> loading, at the cost of higher VRAM usage.
