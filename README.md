@@ -30,6 +30,8 @@
 </div>
 
 > **Personal fork note:** I'm using this repo to study MoE architecture and the MLA attention mechanism. My notes and experiments are in the `experiments/` branch.
+>
+> **Reading progress:** Currently working through Section 3 (MLA) of the paper. Key things to understand: how KV cache compression works and why it reduces memory vs standard MHA.
 
 ## Table of Contents
 
@@ -49,5 +51,4 @@
 We present DeepSeek-V3, a strong Mixture-of-Experts (MoE) language model with 671B total parameters with 37B activated for each token. 
 To achieve efficient inference and cost-effective training, DeepSeek-V3 adopts Multi-head Latent Attention (MLA) and DeepSeekMoE architectures, which were thoroughly validated in DeepSeek-V2. 
 Furthermore, DeepSeek-V3 pioneers an auxiliary-loss-free strategy for load balancing and sets a multi-token prediction training objective for stronger performance. 
-We pre-train DeepSeek-V3 on 14.8 trillion diverse and high-quality tokens, followed by Supervised Fine-Tuning and Reinforcement Learning stages to fully harness its capabilities. 
-Comprehensive evaluations reveal that DeepSeek-V3 outp
+We pre-train DeepSeek-V3 on 14.8 trillion diverse and high-quality to
